@@ -1,4 +1,5 @@
- function teleport()
+repeat wait() until game:GetService("ReplicatedStorage") and game.Workspace:WaitForChild(game.Players.LocalPlayer.Name)
+function teleport()
    game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
         if State == Enum.TeleportState.Started then
             syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ludiocel/e/main/test.lua'))()")
