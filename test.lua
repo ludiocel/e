@@ -1,6 +1,7 @@
+ function teleport()
    game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
         if State == Enum.TeleportState.Started then
-            syn.queue_on_teleport("teleport()")
+            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ludiocel/e/main/test.lua'))()")
         end
     end)
 
@@ -77,3 +78,5 @@
         plr.Chatted:Connect(onChatted)
       end
     end)
+end
+teleport()
